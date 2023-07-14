@@ -1,0 +1,145 @@
+@keyframes duck_fly_1 {
+  0% {
+    left: -60px;
+    top: 50vh;
+  }
+  25% {
+    left: 14vw;
+    top: 61vh;
+  }
+  50% {
+    left: 65vw;
+    top: 21vh;
+  }
+  75% {
+    left: 82vw;
+    top: 40vh;
+  }
+  100% {
+    left: 95vw;
+    top: 51vh;
+    visibility: hidden;
+  }
+}
+@keyframes duck_fly_2 {
+  0% {
+    left: -60px;
+    top: 20vh;
+  }
+  25% {
+    left: 15vw;
+    top: 39vh;
+  }
+  50% {
+    left: 51vw;
+    top: 2vh;
+  }
+  75% {
+    left: 90vw;
+    top: 35vh;
+  }
+  100% {
+    left: 95vw;
+    top: 62vh;
+    visibility: hidden;
+  }
+}
+@keyframes duck_fly_3 {
+  0% {
+    left: -60px;
+    top: 10vh;
+  }
+  25% {
+    left: 11vw;
+    top: 54vh;
+  }
+  50% {
+    left: 71vw;
+    top: 62vh;
+  }
+  75% {
+    left: 88vw;
+    top: 18vh;
+  }
+  100% {
+    left: 95vw;
+    top: 14vh;
+    visibility: hidden;
+  }
+}
+@keyframes duck_fly_4 {
+  0% {
+    left: -60px;
+    top: 33vh;
+  }
+  25% {
+    left: 11vw;
+    top: 16vh;
+  }
+  50% {
+    left: 63vw;
+    top: 14vh;
+  }
+  75% {
+    left: 81vw;
+    top: 46vh;
+  }
+  100% {
+    left: 95vw;
+    top: 18vh;
+    visibility: hidden;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  counter-reset: count;
+  height: 100vh;
+  background-image: url(img/duck_hunt_background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.duck {
+  position: absolute;
+}
+.duck_img {
+  width: 60px;
+}
+.duck_checkbox {
+  position: absolute;
+  visibility: hidden;
+  left: -999999px;
+}
+.duck_checkbox:checked {
+  counter-increment: count;
+}
+.duck_checkbox:checked ~ label {
+  display: none;
+}
+.duck1 {
+  animation: duck_fly_1 10s ease-in 1s both;
+}
+.duck2 {
+  animation: duck_fly_2 10s ease-in 2s both;
+}
+.duck3 {
+  animation: duck_fly_3 10s ease-in 3s both;
+}
+.duck4 {
+  animation: duck_fly_4 10s ease-in 4s both;
+}
+
+.counte_info {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+}
+.counte_info::before {
+  content: counter(count);
+}/*# sourceMappingURL=style.css.map */

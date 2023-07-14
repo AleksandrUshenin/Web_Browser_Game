@@ -1,0 +1,79 @@
+$width_duck:60px;
+$count_ducks:4;
+
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+  
+    @return $randomNum;
+  }
+
+  @for $i from 1 through $count_ducks {
+    @keyframes duck_fly_#{$i} {
+        0% {
+            left: -$width_duck;
+            top: random(70)+vh;
+        }
+        25%{
+            left: randomNum(5, 25)+vw;
+            top: random(70)+vh;
+        }
+        50%{
+            left: randomNum(50, 75)+vw;
+            top: random(70)+vh;
+        }
+        75%{
+            left: randomNum(75, 90)+vw;
+            top: random(70)+vh;
+        }
+        100% {
+            left: 95vw;
+            top: random(70)+vh;
+            visibility: hidden;
+        }
+    }
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    counter-reset: count;
+    height: 100vh;
+    background-image: url(img/duck_hunt_background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.duck{
+    position: absolute;
+
+    &_img{
+        width: $width_duck;
+    }
+    &_checkbox{
+        position: absolute;
+        visibility: hidden;
+        left: -999999px;
+        &:checked{
+            counter-increment: count;
+        }
+        &:checked ~ label{
+            display: none;
+        }
+    }
+    @for $i from 1 through $count_ducks {
+        &#{$i}{
+            animation: duck_fly_#{$i} 10s ease-in #{$i}s both;
+        }
+    }
+}
+.counte_info{
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    &::before{
+        content: counter(count);
+    }
+}
