@@ -1,92 +1,92 @@
 @keyframes duck_fly_1 {
   0% {
     left: -60px;
-    top: 50vh;
+    top: 55vh;
   }
   25% {
-    left: 14vw;
-    top: 61vh;
+    left: 16vw;
+    top: 17vh;
   }
   50% {
-    left: 65vw;
-    top: 21vh;
+    left: 54vw;
+    top: 69vh;
   }
   75% {
-    left: 82vw;
-    top: 40vh;
+    left: 85vw;
+    top: 8vh;
   }
   100% {
     left: 95vw;
-    top: 51vh;
+    top: 63vh;
     visibility: hidden;
   }
 }
 @keyframes duck_fly_2 {
   0% {
     left: -60px;
-    top: 20vh;
+    top: 4vh;
   }
   25% {
-    left: 15vw;
-    top: 39vh;
+    left: 11vw;
+    top: 58vh;
   }
   50% {
-    left: 51vw;
-    top: 2vh;
+    left: 59vw;
+    top: 42vh;
   }
   75% {
-    left: 90vw;
-    top: 35vh;
+    left: 81vw;
+    top: 34vh;
   }
   100% {
     left: 95vw;
-    top: 62vh;
+    top: 63vh;
     visibility: hidden;
   }
 }
 @keyframes duck_fly_3 {
   0% {
     left: -60px;
-    top: 10vh;
+    top: 47vh;
   }
   25% {
-    left: 11vw;
-    top: 54vh;
+    left: 18vw;
+    top: 68vh;
   }
   50% {
-    left: 71vw;
-    top: 62vh;
+    left: 55vw;
+    top: 5vh;
   }
   75% {
-    left: 88vw;
-    top: 18vh;
+    left: 85vw;
+    top: 28vh;
   }
   100% {
     left: 95vw;
-    top: 14vh;
+    top: 31vh;
     visibility: hidden;
   }
 }
 @keyframes duck_fly_4 {
   0% {
     left: -60px;
-    top: 33vh;
+    top: 24vh;
   }
   25% {
-    left: 11vw;
-    top: 16vh;
+    left: 21vw;
+    top: 49vh;
   }
   50% {
-    left: 63vw;
-    top: 14vh;
+    left: 61vw;
+    top: 22vh;
   }
   75% {
-    left: 81vw;
-    top: 46vh;
+    left: 82vw;
+    top: 60vh;
   }
   100% {
     left: 95vw;
-    top: 18vh;
+    top: 51vh;
     visibility: hidden;
   }
 }
@@ -123,16 +123,16 @@ body {
   display: none;
 }
 .duck1 {
-  animation: duck_fly_1 10s ease-in 1s both;
+  animation: duck_fly_1 8s ease-in 1s both;
 }
 .duck2 {
-  animation: duck_fly_2 10s ease-in 2s both;
+  animation: duck_fly_2 8s ease-in 2s both;
 }
 .duck3 {
-  animation: duck_fly_3 10s ease-in 3s both;
+  animation: duck_fly_3 8s ease-in 3s both;
 }
 .duck4 {
-  animation: duck_fly_4 10s ease-in 4s both;
+  animation: duck_fly_4 8s ease-in 4s both;
 }
 
 .counte_info {
