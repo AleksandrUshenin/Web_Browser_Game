@@ -1,17 +1,16 @@
 $width_duck:60px;
-$count_ducks:4;
+$count_ducks:8;
 
-@function randomNum($min, $max) {
+  @function randomNum($min, $max) {
     $rand: random();
     $randomNum: $min + floor($rand * (($max - $min) + 1));
   
     @return $randomNum;
   }
-
   @for $i from 1 through $count_ducks {
     @keyframes duck_fly_#{$i} {
         0% {
-            left: -$width_duck;
+            left: -$width_duck*2;
             top: random(70)+vh;
         }
         25%{
@@ -48,6 +47,7 @@ body{
 }
 .duck{
     position: absolute;
+    //margin: 10px;
 
     &_img{
         width: $width_duck;
@@ -59,21 +59,24 @@ body{
         &:checked{
             counter-increment: count;
         }
-        &:checked ~ label{
-            display: none;
-        }
+        // &:checked ~ label{
+        //     display: none;
+        // }
     }
     @for $i from 1 through $count_ducks {
         &#{$i}{
-            animation: duck_fly_#{$i} 8s ease-in #{$i}s both;
+            animation: duck_fly_#{$i} 10s ease-in #{$i}s both;
         }
     }
 }
-.counte_info{
+.info{
     position: absolute;
     top: 14px;
     right: 24px;
-    &::before{
-        content: counter(count);
-    }
+    
+    // .counte_info{
+    //     &::before{
+    //         content: counter(count);
+    //     }
+    // }
 }
